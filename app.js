@@ -1,14 +1,14 @@
-const targetDate = new Date("March 1, 2025 00:00:00").getTime();
+var targetDate = new Date("March 1, 2025 00:00:00").getTime();
 
 function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+    var now = new Date().getTime();
+    var distance = targetDate - now;
 
-    const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
-    const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
+    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("months").textContent = months;
     document.getElementById("days").textContent = days;
@@ -22,4 +22,4 @@ function updateCountdown() {
     }
 }
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+var countdownInterval = setInterval(updateCountdown, 1000);
